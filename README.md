@@ -8,7 +8,7 @@ This is my take on running Binary Ninja in Docker. Other implementations:
 
 - Shared X11 socket with the host so you can use the GUI (runs on Linux)
 - Bind mounts the binary ninja directory to the container, so you can share your local installation
-- Sets `$HOME` to the mounted Binary Ninja directory, so license information and plugins are stored in one location
+- Sets `$HOME` to the mounted Binary Ninja directory, so license information and plugins are stored in one location, and persist across runs
 - Executes Binary Ninja GUI from xterm so you can restart the GUI to apply updates
 
 ## Usage

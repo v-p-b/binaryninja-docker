@@ -10,7 +10,8 @@ RUN     apt-get install -y x11-apps sudo libdbus-1-3 libegl1 libxkbcommon0 libgl
 
 # Environment
 USER    ubuntu
-ENV     HOME /binaryninja
+ENV     HOME /home/binja
+COPY    ./docker/run.sh /run.sh
 
 # Start - we use xterm so Binary Ninja can be restarted to finish upgrades
-ENTRYPOINT     ["xterm","-e","/binaryninja/binaryninja"]
+ENTRYPOINT     ["xterm","-e","/run.sh"]

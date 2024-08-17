@@ -13,4 +13,4 @@ fi
 
 binja_path=`realpath "$1"`
 
-docker run --rm -it --env QT_DEBUG_PLUGINS=1 --env DISPLAY=$DISPLAY --volume /tmp/.X11-unix:/tmp/.X11-unix --volume "$binja_path":/binaryninja ${@:2} binja
+docker run --rm -it --env QT_DEBUG_PLUGINS=1 --env DISPLAY=$DISPLAY --volume /tmp/.X11-unix:/tmp/.X11-unix --volume "$binja_path":/binaryninja --volume $(realpath ./home):/home/binja ${@:2} binja
